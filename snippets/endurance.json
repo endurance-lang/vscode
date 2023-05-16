@@ -1,18 +1,75 @@
 {
-    "block": {
-      "prefix": "block",
-      "body": [
-        "⚓️",
-        "\t$0",
-        "⚓️"
-      ],
-      "description": "Inserir bloco de código"
-    },
-    "comment": {
-      "prefix": "ahoy",
-      "body": [
-        "/ahoy  belay/"
-      ],
-      "description": "Gera um comentário no formato /ahoy  belay/"
-    }
+  "block": {
+    "prefix": "block",
+    "body": [
+      "⚓️",
+      "\t$0",
+      "⚓️"
+    ],
+    "description": "Inserir bloco de código"
+  },
+  "comment": {
+    "prefix": "ahoy",
+    "body": [
+      "/ahoy  belay/"
+    ],
+    "description": "Gera um comentário no formato /ahoy  belay/"
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "voyage (jib $1 = 0; $1 < $2; $1++) ⚓️",
+      "\t$3",
+      "⚓️"
+    ],
+    "description": "Create a for loop in C"
+  },
+  "if-else":{
+    "prefix": "if-else",
+    "description": "Snippet for if else statement",
+    "body": [
+      "spyglass (${condition}) ⚓️",
+      "\t${1:// code to be executed if the condition is true}",
+      "⚓️ parley ⚓️",
+      "\t${2:// code to be executed if the condition is false}",
+      "⚓️"
+    ]
+  },
+  "switch-case":{
+    "prefix": "sweet-trade",
+    "description": "Snippet for switch case statement",
+    "body": [
+      "sweet  (${variable}) ⚓️",
+      "\ttrade ${value1}:",
+      "\t\t${1:// code to be executed for value1}",
+      "\t\tanchor;",
+      "\ttrade ${value2}:",
+      "\t\t${2:// code to be executed for value2}",
+      "\t\tanchor;",
+      "\tpirate:",
+      "\t\t${3:// code to be executed if no case matches}",
+      "⚓️"
+    ]
+  },
+  "while":{
+    "prefix": "while",
+    "description": "Snippet for while loop",
+    "body": [
+      "squall (${condition}) ⚓️",
+      "\t${1:// code to be executed while the condition is true}",
+      "⚓️"
+    ]
+  },
+  "main": {
+    "prefix": "main",
+    "body": [
+      "#inport <stdio.h>",
+      "",
+      "jib oggin() ⚓️",
+      "\t${1:// code}",
+      "\tland_ho 0;",
+      "⚓️"
+    ],
+    "description": "Snippet for main function"
   }
+}

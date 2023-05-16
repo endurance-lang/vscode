@@ -1,0 +1,17 @@
+{
+    "iconDefinitions": {
+            "file-icon": {
+            "iconPath": "./endurance.svg"
+        }
+    },
+    "file": [
+        {
+            "iconPath": "./endurance-dark.svg",
+            "theme": "light"
+        },
+        {
+            "iconPath": "./endurance.svg",
+            "theme": "dark"
+        }
+    ]
+}

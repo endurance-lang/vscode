@@ -2,7 +2,7 @@
   "name": "endurance",
   "displayName": "endurance",
   "description": "🏴‍☠️ endurance is pirate programming language",
-  "version": "0.0.7",
+  "version": "0.0.14",
   "publisher": "endurance",
   "icon": "icon.png",
   "galleryBanner": {
@@ -62,24 +62,20 @@
         }
       ]
     },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "endurance",
+          "title": "endurance",
+          "icon": "./icons/endurance.svg"
+        }
+      ]
+    },
     "iconThemes": [
       {
         "id":"endurance",
         "label": "Endurance Icons",
-        "path": "./icons",
-        "fileExtensions": {
-          ".end": "endurance"
-        },
-        "light": {
-          "fileExtensions": {
-            ".end": "endurance-dark"
-          }
-        },
-        "dark": {
-          "fileExtensions": {
-            ".end": "endurance"
-          }
-        }
+        "path": "./icons/theme-icons.json"
       }
     ]
   },
