@@ -1,3 +1,0 @@
-# Endurance
-
-Test
