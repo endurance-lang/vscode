@@ -1,0 +1,87 @@
+{
+  "name": "endurance",
+  "displayName": "endurance",
+  "description": "🏴‍☠️ endurance is pirate programming language",
+  "version": "0.0.6",
+  "publisher": "endurance",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color":"#0D0C0C",
+    "theme":"dark"
+  },
+  "engines": {
+    "vscode": "^1.43.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters",
+    "Snippets",
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "endurance",
+    "endurance-lang",
+    "end"
+  ],
+  "activationEvents": [
+    "onLanguage:endurance"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+          "id": "endurance",
+          "extensions": [
+              ".end"
+          ],
+          "aliases": [
+            "Endurance"
+          ],
+          "configuration": "./language-configuration.json"
+      }
+    ],
+    "snippets": [
+        {
+            "language": "endurance",
+            "path": "./snippets/endurance.json"
+        }
+    ],
+    "commands": [
+      {
+        "command": "endurance.helloWorld",
+        "title": "Hello World"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id":"endurance",
+        "label": "Endurance Icons",
+        "path": "./assets"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:publish":"vsce publish",
+    "vscode:prepublish": "npm run compile",
+    "vscode:package":"vsce package",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.43.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4",
+    "@vscode/test-electron": "^2.3.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "block": {
+      "prefix": "block",
+      "body": [
+        "⚓️",
+        "// Código do bloco aqui",
+        "// Mais código do bloco",
+        "⚓️"
+      ],
+      "description": "Inserir bloco de código"
+    }
+  }
