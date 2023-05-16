@@ -27,6 +27,7 @@ export function activate(context: vscode.ExtensionContext) {
 ⚓️
 `);
 
+
 	// Registrar o comando e associá-lo a um atalho de teclado
 	context.subscriptions.push(
 		vscode.commands.registerCommand('endurance.startBlock', () => {

@@ -3,6 +3,7 @@
   "displayName": "endurance",
   "description": "🏴‍☠️ endurance is pirate programming language",
   "version": "0.0.1",
+  "publisher": "endurance",
   "engines": {
     "vscode": "^1.78.0"
   },
@@ -16,10 +17,15 @@
       {
         "command": "endurance.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "endurance.startBlock",
+        "title": "Start Block"
       }
     ]
   },
   "scripts": {
+    "deploy":"vsce publish --no-yarn",
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
