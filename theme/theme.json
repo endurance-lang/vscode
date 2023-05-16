@@ -1,0 +1,9 @@
+{
+    "colors": {
+        "editor.tokenColorCustomizations": {
+            "[endurance]": {
+                "comments": "#808080"
+            }
+        }
+    }
+}

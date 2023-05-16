@@ -2,7 +2,7 @@
   "name": "endurance",
   "displayName": "endurance",
   "description": "🏴‍☠️ endurance is pirate programming language",
-  "version": "0.0.18",
+  "version": "0.1.1",
   "publisher": "endurance",
   "icon": "icon.png",
   "galleryBanner": {
@@ -43,7 +43,7 @@
               ".end"
           ],
           "aliases": [
-            "Endurance"
+            "endurance"
           ],
           "configuration": "./language-configuration.json"
       }
