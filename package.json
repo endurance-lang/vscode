@@ -2,7 +2,7 @@
   "name": "endurance",
   "displayName": "endurance",
   "description": "🏴‍☠️ endurance is pirate programming language",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "endurance",
   "icon": "icon.png",
   "galleryBanner": {
@@ -53,16 +53,38 @@
         "title": "Hello World"
       }
     ],
+    "views": {
+      "explorer": [
+        {
+          "id": "endurance",
+          "name": "endurance",
+          "icon": "./icons/endurance.svg"
+        }
+      ]
+    },
     "iconThemes": [
       {
         "id":"endurance",
         "label": "Endurance Icons",
-        "path": "./assets"
+        "path": "./icons",
+        "fileExtensions": {
+          ".end": "endurance"
+        },
+        "light": {
+          "fileExtensions": {
+            ".end": "endurance-dark"
+          }
+        },
+        "dark": {
+          "fileExtensions": {
+            ".end": "endurance"
+          }
+        }
       }
     ]
   },
   "scripts": {
-    "vscode:publish":"vsce publish",
+    "deploy":"vsce publish",
     "vscode:prepublish": "npm run compile",
     "vscode:package":"vsce package",
     "compile": "tsc -p ./",

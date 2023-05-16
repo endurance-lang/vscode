@@ -3,10 +3,16 @@
       "prefix": "block",
       "body": [
         "⚓️",
-        "// Código do bloco aqui",
-        "// Mais código do bloco",
+        "\t$0",
         "⚓️"
       ],
       "description": "Inserir bloco de código"
+    },
+    "comment": {
+      "prefix": "ahoy",
+      "body": [
+        "/ahoy  belay/"
+      ],
+      "description": "Gera um comentário no formato /ahoy  belay/"
     }
   }
