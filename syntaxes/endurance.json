@@ -1,0 +1,240 @@
+{
+    "name": "Endurance",
+    "scopeName": "source.endurance",
+    "fileTypes": [
+        ".end"
+    ],
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#variables"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#control-flow"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "match": "/ahoy belay/",
+                    "name": "comment.endurance"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "match": "\\b-?[0-9]+\\b",
+                    "name": "constant.numeric.endurance"
+                },
+                {
+                    "match": "\\b-?[0-9]+\\.[0-9]+\\b",
+                    "name": "constant.numeric.endurance"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "\\bspyglass\\b",
+                    "name": "keyword.control.endurance"
+                },
+                {
+                    "match": "\\bparley\\b",
+                    "name": "keyword.control.endurance"
+                },
+                {
+                    "match": "\\btrade\\b",
+                    "name": "keyword.control.endurance"
+                },
+                {
+                    "match": "\\banchor\\b",
+                    "name": "keyword.control.endurance"
+                },
+                {
+                    "match": "\\bwindward\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\\bleeward\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\\bcutlass\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\\bmusket\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\\binport\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\\boggin\\b",
+                    "name": "entity.name.function.endurance"
+                },
+                {
+                    "match": "\\bpirate\\b",
+                    "name": "keyword.control.endurance"
+                },
+                {
+                    "match": "\\bland_ho\\b",
+                    "name": "keyword.control.endurance"
+                },
+                {
+                    "match": "\\bcharter\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\\bcrew\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\\btreasure\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\\brummage\\b",
+                    "name": "keyword.operator.endurance"
+                },
+                {
+                    "match": "\\bsweet\\b",
+                    "name": "keyword.control.endurance"
+                },
+                {
+                    "match": "\\bhoard\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\\bbooty\\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\bnet\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\bchart\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\bplunderhaul\b",
+                    "name": "keyword.other.endurance"
+                },
+                {
+                    "match": "\bTRUE\b",
+                    "name": "constant.language.endurance"
+                },
+                {
+                    "match": "\bFALSE\b",
+                    "name": "constant.language.endurance"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "match": "\bjib\b",
+                    "name": "storage.type.endurance"
+                },
+                {
+                    "match": "\bboat\b",
+                    "name": "storage.type.endurance"
+                },
+                {
+                    "match": "\bship\b",
+                    "name": "storage.type.endurance"
+                },
+                {
+                    "match": "\baddled\b",
+                    "name": "storage.type.endurance"
+                },
+                {
+                    "match": "\bsailor\b",
+                    "name": "storage.type.endurance"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "match": "\\+|\\-|\\||\\/",
+                    "name": "keyword.operator.endurance"
+                },
+                {
+                    "match": "==|!=|<|>|<=|>=",
+                    "name": "keyword.operator.endurance"
+                },
+                {
+                    "match": "\brum\b|\bgrog\b|\bsober\b",
+                    "name": "keyword.operator.endurance"
+                },
+                {
+                    "match": "\\=",
+                    "name": "keyword.operator.endurance"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "begin": "'",
+                    "end": "'",
+                    "name": "string.quoted.single.endurance"
+                },
+                {
+                    "begin": "\"",
+                    "end": "\"",
+                    "name": "string.quoted.double.endurance"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=\\s*=)",
+                    "name": "variable.other.endurance"
+                }
+            ]
+        },
+        "functions": {
+            "patterns": [
+                {
+                    "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b\\s(?=\\()",
+                    "name": "entity.name.function.endurance"
+                }
+            ]
+        },
+        "control-flow": {
+            "patterns": [
+                {
+                    "match": "\bif\b|\belse\b|\bfor\b|\bwhile\b|\bdo\b|\breturn\b|\bbreak\b|\bcontinue\b",
+                    "name": "keyword.control.endurance"
+                }
+            ]
+        }
+    }
+}

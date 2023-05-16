@@ -4,7 +4,7 @@
     "body": [
       "⚓️",
       "\t$0",
-      "⚓️"
+      "⚓️;"
     ],
     "description": "Inserir bloco de código"
   },
@@ -20,7 +20,7 @@
     "body": [
       "voyage (jib $1 = 0; $1 < $2; $1++) ⚓️",
       "\t$3",
-      "⚓️"
+      "⚓️;"
     ],
     "description": "Create a for loop in C"
   },
@@ -30,9 +30,10 @@
     "body": [
       "spyglass (${condition}) ⚓️",
       "\t${1:// code to be executed if the condition is true}",
-      "⚓️ parley ⚓️",
+      "⚓️;", 
+      "parley ⚓️",
       "\t${2:// code to be executed if the condition is false}",
-      "⚓️"
+      "⚓️;"
     ]
   },
   "switch-case":{
@@ -41,14 +42,14 @@
     "body": [
       "sweet  (${variable}) ⚓️",
       "\ttrade ${value1}:",
-      "\t\t${1:// code to be executed for value1}",
+      "\t\t${1:/ahoy belay/}",
       "\t\tanchor;",
       "\ttrade ${value2}:",
-      "\t\t${2:// code to be executed for value2}",
+      "\t\t${2:/ahoy belay/}",
       "\t\tanchor;",
       "\tpirate:",
-      "\t\t${3:// code to be executed if no case matches}",
-      "⚓️"
+      "\t\t${3:/ahoy belay/}",
+      "⚓️;"
     ]
   },
   "while":{
@@ -56,19 +57,19 @@
     "description": "Snippet for while loop",
     "body": [
       "squall (${condition}) ⚓️",
-      "\t${1:// code to be executed while the condition is true}",
-      "⚓️"
+      "\t${1:/ahoy belay/}",
+      "⚓️;"
     ]
   },
   "main": {
     "prefix": "main",
     "body": [
-      "#inport <stdio.h>",
+      "inport",
       "",
       "jib oggin() ⚓️",
-      "\t${1:// code}",
+      "\t${1:/ahoy belay/ }",
       "\tland_ho 0;",
-      "⚓️"
+      "⚓️;"
     ],
     "description": "Snippet for main function"
   }
