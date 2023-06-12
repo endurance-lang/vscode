@@ -72,5 +72,30 @@
       "⚓️;"
     ],
     "description": "Snippet for main function"
+  },
+  "enum": {
+    "prefix": "crew",
+    "body": [
+      "crew $1 ⚓️",
+      "\t$2",
+      "⚓️;"
+    ],
+    "description": "Snippet for enum in Endurance"
+  },
+  "print": {
+    "prefix": "parrot",
+    "body": [
+      "parrot($1);"
+    ],
+    "description": "Snippet for print statement in Endurance"
+  },
+  "struct": {
+    "prefix": "chest",
+    "body": [
+      "chest $1 ⚓️",
+      "\t$2",
+      "⚓️;"
+    ],
+    "description": "Snippet for struct in Endurance"
   }
 }
