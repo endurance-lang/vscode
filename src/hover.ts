@@ -10,31 +10,21 @@ export class EnduranceHoverProvider implements HoverProvider {
     const hoveredWord = document.getText(wordRange);
     let hoverText = "";
 
-    // Verifique a palavra "hoveredWord" e forneça informações específicas com base no seu contexto.
-    // Você pode usar a tabela de símbolos ou outras estruturas de dados para obter informações sobre os elementos.
+    // Mapeie as palavras-chave para as informações de "hover" correspondentes
+    const keywordInfo: { [key: string]: string } = {
+      jib: "Tipo de dado inteiro",
+      boat: "Tipo de dado de ponto flutuante",
+      ship: "Tipo de dado de ponto flutuante de alta precisão",
+      addled: "Tipo de dado booleano (verdadeiro ou falso)",
+      sailor: "Tipo de dado caractere",
+      spyglass: "Palavra-chave usada para estruturas condicionais 'if'",
+      parley: "Palavra-chave usada para estruturas condicionais 'else'"
+      // Adicione outras palavras-chave e informações relevantes aqui
+    };
 
-    // Exemplo de informações de "Hover" para tipos:
-    if (hoveredWord === "jib") {
-      hoverText = "Tipo de dado inteiro";
-    } else if (hoveredWord === "boat") {
-      hoverText = "Tipo de dado de ponto flutuante";
-    } else if (hoveredWord === "ship") {
-      hoverText = "Tipo de dado de ponto flutuante de alta precisão";
-    } else if (hoveredWord === "addled") {
-      hoverText = "Tipo de dado booleano (verdadeiro ou falso)";
-    } else if (hoveredWord === "sailor") {
-      hoverText = "Tipo de dado caractere";
+    if (hoveredWord in keywordInfo) {
+      hoverText = keywordInfo[hoveredWord];
     }
-
-    // Exemplo de informações de "Hover" para palavras-chave:
-    else if (hoveredWord === "spyglass") {
-      hoverText = "Palavra-chave usada para estruturas condicionais 'if'";
-    } else if (hoveredWord === "parley") {
-      hoverText = "Palavra-chave usada para estruturas condicionais 'else'";
-    }
-    // ...
-
-    // Verifique outros elementos da linguagem Endurance e forneça informações relevantes.
 
     // Retorne um objeto Hover com as informações encontradas.
     return new Hover(hoverText);

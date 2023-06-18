@@ -1,101 +1,257 @@
 {
-  "block": {
-    "prefix": "block",
-    "body": [
-      "⚓️",
-      "\t$0",
-      "⚓️;"
-    ],
-    "description": "Inserir bloco de código"
-  },
-  "comment": {
-    "prefix": "ahoy",
-    "body": [
-      "/ahoy  belay/"
-    ],
-    "description": "Gera um comentário no formato /ahoy  belay/"
-  },
-  "for": {
-    "prefix": "for",
-    "body": [
-      "voyage (jib $1 = 0; $1 < $2; $1++) ⚓️",
-      "\t$3",
-      "⚓️;"
-    ],
-    "description": "Create a for loop in C"
-  },
-  "if-else":{
-    "prefix": "if-else",
-    "description": "Snippet for if else statement",
-    "body": [
-      "spyglass (${condition}) ⚓️",
-      "\t${1:// code to be executed if the condition is true}",
-      "⚓️;", 
-      "parley ⚓️",
-      "\t${2:// code to be executed if the condition is false}",
-      "⚓️;"
-    ]
-  },
-  "switch-case":{
-    "prefix": "sweet-trade",
-    "description": "Snippet for switch case statement",
-    "body": [
-      "sweet  (${variable}) ⚓️",
-      "\ttrade ${value1}:",
-      "\t\t${1:/ahoy belay/}",
-      "\t\tanchor;",
-      "\ttrade ${value2}:",
-      "\t\t${2:/ahoy belay/}",
-      "\t\tanchor;",
-      "\tpirate:",
-      "\t\t${3:/ahoy belay/}",
-      "⚓️;"
-    ]
-  },
-  "while":{
-    "prefix": "while",
-    "description": "Snippet for while loop",
-    "body": [
-      "squall (${condition}) ⚓️",
-      "\t${1:/ahoy belay/}",
-      "⚓️;"
-    ]
-  },
-  "main": {
-    "prefix": "main",
-    "body": [
-      "inport",
-      "",
-      "jib oggin() ⚓️",
-      "\t${1:/ahoy belay/ }",
-      "\tland_ho 0;",
-      "⚓️;"
-    ],
-    "description": "Snippet for main function"
-  },
-  "enum": {
-    "prefix": "crew",
-    "body": [
-      "crew $1 ⚓️",
-      "\t$2",
-      "⚓️;"
-    ],
-    "description": "Snippet for enum in Endurance"
-  },
-  "print": {
-    "prefix": "parrot",
-    "body": [
-      "parrot($1);"
-    ],
-    "description": "Snippet for print statement in Endurance"
-  },
-  "struct": {
-    "prefix": "chest",
-    "body": [
-      "chest $1 ⚓️",
-      "\t$2",
-      "⚓️;"
-    ],
-    "description": "Snippet for struct in Endurance"
+  "name": "Endurance",
+  "scopeName": "source.endurance",
+  "fileTypes": [".end"],
+  "patterns": [
+    {
+      "include": "#stmts"
+    }
+  ],
+  "repository": {
+    "stmts": {
+      "patterns": [
+        {
+          "include": "#conditional"
+        },
+        {
+          "include": "#repetition"
+        },
+        {
+          "include": "#func"
+        },
+        {
+          "include": "#var"
+        },
+        {
+          "include": "#commands"
+        },
+        {
+          "include": "#expr"
+        },
+        {
+          "include": "#block"
+        }
+      ]
+    },
+    "block": {
+      "patterns": [
+        {
+          "match": "\\u26f3 #stmts \\u26f3;",
+          "name": "meta.block.endurance"
+        }
+      ]
+    },
+    "conditional": {
+      "patterns": [
+        {
+          "match": "spyglass \\( #expr \\) #stmt",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "spyglass \\( #expr \\) #stmt parley #stmt",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "sweet \\( #expr \\) \\u26f3 #caselist \\u26f3;",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "caselist": {
+      "patterns": [
+        {
+          "match": "#caselist trade #term : #stmts",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#caselist pirate : #stmts",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "",
+          "name": ""
+        }
+      ]
+    },
+    "repetition": {
+      "patterns": [
+        {
+          "match": "squall \\( #expr \\) #stmt",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "voyage \\( #optexpr ; #optexpr ; #optexpr \\) #stmt",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "weight_anchor #stmt squall \\( #expr \\) ;",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "var": {
+      "patterns": [
+        {
+          "match": "#type #id vector ;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#type * #pointer ;",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "pointer": {
+      "patterns": [
+        {
+          "match": "#id vector",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "* #pointer",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "func": {
+      "patterns": [
+        {
+          "match": "#type #funcid \\( #params \\) #stmt",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "commands": {
+      "patterns": [
+        {
+          "match": "strike;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "brace;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "heave \\( #expr \\) ;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "haul \\( #expr \\) ;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "sail \\( #expr \\) ;",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "expr": {
+      "patterns": [
+        {
+          "match": "#expr + #expr",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#expr - #expr",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#term",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "term": {
+      "patterns": [
+        {
+          "match": "#id",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#number",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "id": {
+      "patterns": [
+        {
+          "match": "[a-zA-Z_][a-zA-Z0-9_]*",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "number": {
+      "patterns": [
+        {
+          "match": "\\d+",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "type": {
+      "patterns": [
+        {
+          "match": "aft",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "fore",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "port",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "starboard",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "funcid": {
+      "patterns": [
+        {
+          "match": "[a-zA-Z_][a-zA-Z0-9_]*",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "params": {
+      "patterns": [
+        {
+          "match": "#params , #param",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#param",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "",
+          "name": ""
+        }
+      ]
+    },
+    "param": {
+      "patterns": [
+        {
+          "match": "#type #id",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "optexpr": {
+      "patterns": [
+        {
+          "match": "#expr",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "",
+          "name": ""
+        }
+      ]
+    }
   }
 }
