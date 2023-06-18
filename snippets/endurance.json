@@ -9,7 +9,7 @@
     "description": "Inserir bloco de código"
   },
   "comment": {
-    "prefix": "ahoy",
+    "prefix": "comment",
     "body": [
       "/ahoy  belay/"
     ],
@@ -37,7 +37,7 @@
     ]
   },
   "switch-case":{
-    "prefix": "sweet-trade",
+    "prefix": "sweet-case",
     "description": "Snippet for switch case statement",
     "body": [
       "sweet  (${variable}) ⚓️",
@@ -74,7 +74,7 @@
     "description": "Snippet for main function"
   },
   "enum": {
-    "prefix": "crew",
+    "prefix": "enum",
     "body": [
       "crew $1 ⚓️",
       "\t$2",
@@ -83,14 +83,14 @@
     "description": "Snippet for enum in Endurance"
   },
   "print": {
-    "prefix": "parrot",
+    "prefix": "print",
     "body": [
       "parrot($1);"
     ],
     "description": "Snippet for print statement in Endurance"
   },
   "struct": {
-    "prefix": "chest",
+    "prefix": "struct",
     "body": [
       "chest $1 ⚓️",
       "\t$2",
