@@ -1,298 +1,257 @@
 {
-    "name": "Endurance",
-    "scopeName": "source.endurance",
-    "fileTypes": [".end"],
-    "patterns": [
-      {
-        "include": "#comments"
-      },
-      {
-        "include": "#numbers"
-      },
-      {
-        "include": "#keywords"
-      },
-      {
-        "include": "#types"
-      },
-      {
-        "include": "#operators"
-      },
-      {
-        "include": "#strings"
-      },
-      {
-        "include": "#variables"
-      },
-      {
-        "include": "#functions"
-      },
-      {
-        "include": "#control-flow"
-      }
-    ],
-    "repository": {
-      "comments": {
-        "patterns": [
-          {
-            "begin": "/ahoy",
-            "end": "belay/",
-            "name": "comment.endurance"
-          }
-        ]
-      },
-      "numbers": {
-        "patterns": [
-          {
-            "match": "\\b-?[0-9]+\\b",
-            "name": "constant.numeric.endurance"
-          },
-          {
-            "match": "\\b-?[0-9]+\\.[0-9]+\\b",
-            "name": "constant.numeric.endurance"
-          }
-        ]
-      },
-      "keywords": {
-        "patterns": [
-          {
-            "match": "\\bspyglass\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bparley\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\btrade\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\banchor\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bwindward\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\bleeward\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\bcutlass\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\bmusket\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\binport\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\boggin\\b",
-            "name": "entity.name.function.endurance"
-          },
-          {
-            "match": "\\bpirate\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bland_ho\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bcharter\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\bcrew\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\btreasure\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\brummage\\b",
-            "name": "keyword.operator.endurance"
-          },
-          {
-            "match": "\\bsweet\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bhoard\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\bbooty\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\bnet\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\bchart\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\bplunderhaul\\b",
-            "name": "keyword.other.endurance"
-          },
-          {
-            "match": "\\baye\\b",
-            "name": "constant.language.endurance"
-          },
-          {
-            "match": "\\barr\\b",
-            "name": "constant.language.endurance"
-          }
-        ]
-      },
-      "types": {
-        "patterns": [
-          {
-            "match": "\\bjib\\b",
-            "name": "storage.type.endurance"
-          },
-          {
-            "match": "\\bboat\\b",
-            "name": "storage.type.endurance"
-          },
-          {
-            "match": "\\bship\\b",
-            "name": "storage.type.endurance"
-          },
-          {
-            "match": "\\baddled\\b",
-            "name": "storage.type.endurance"
-          },
-          {
-            "match": "\\bsailor\\b",
-            "name": "storage.type.endurance"
-          }
-        ]
-      },
-      "operators": {
-        "patterns": [
-          {
-            "match": "\\+|\\-|\\||\\/",
-            "name": "keyword.operator.endurance"
-          },
-          {
-            "match": "==|!=|<|>|<=|>=",
-            "name": "keyword.operator.endurance"
-          },
-          {
-            "match": "\\brum\\b|\\bgrog\\b|\\bsober\\b",
-            "name": "keyword.operator.endurance"
-          },
-          {
-            "match": "=",
-            "name": "keyword.operator.endurance"
-          },
-          {
-            "match": "\\bdo\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bprintf\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bscanf\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bfor\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bgoto\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bsizeof\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bswitch\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\btypedef\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bunion\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bwhile\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bfree\\b",
-            "name": "keyword.control.endurance"
-          },
-          {
-            "match": "\\bpointer\\b",
-            "name": "keyword.control.endurance"
-          }
-        ]
-      },
-      "strings": {
-        "patterns": [
-          {
-            "begin": "'",
-            "end": "'",
-            "name": "string.quoted.single.endurance"
-          },
-          {
-            "begin": "\"",
-            "end": "\"",
-            "name": "string.quoted.double.endurance",
-            "patterns": [
-              {
-                "match": "'[^']*'",
-                "name": "string.quoted.single.endurance"
-              }
-            ]
-          }
-        ]
-      },
-      "variables": {
-        "patterns": [
-          {
-            "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b(?=\\s*=)",
-            "name": "variable.other.endurance"
-          }
-        ]
-      },
-      "functions": {
-        "patterns": [
-          {
-            "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b\\s(?=\\()",
-            "name": "entity.name.function.endurance"
-          },
-          {
-            "match": "\\bparrot\\b\\s(?=\\()",
-            "name": "entity.name.function.endurance"
-          }
-        ]
-      },
-      "control-flow": {
-        "patterns": [
-          {
-            "match": "\\bspyglass\\b|\\bparley\\b|\\bweigh_anchor\\b|\\bvoyage\\b|\\bcompass\\b|\\brummage\\b|\\bsweet\\b|\\bcharter\\b|\\btreasure\\b|\\bsquall\\b|\\bswab\\b|\\bharpoon\\b",
-            "name": "keyword.control.endurance"
-          }
-        ]
-      }
+  "name": "Endurance",
+  "scopeName": "source.endurance",
+  "fileTypes": [".end"],
+  "patterns": [
+    {
+      "include": "#stmts"
+    }
+  ],
+  "repository": {
+    "stmts": {
+      "patterns": [
+        {
+          "include": "#conditional"
+        },
+        {
+          "include": "#repetition"
+        },
+        {
+          "include": "#func"
+        },
+        {
+          "include": "#var"
+        },
+        {
+          "include": "#commands"
+        },
+        {
+          "include": "#expr"
+        },
+        {
+          "include": "#block"
+        }
+      ]
+    },
+    "block": {
+      "patterns": [
+        {
+          "match": "\\u26f3 #stmts \\u26f3;",
+          "name": "meta.block.endurance"
+        }
+      ]
+    },
+    "conditional": {
+      "patterns": [
+        {
+          "match": "spyglass \\( #expr \\) #stmt",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "spyglass \\( #expr \\) #stmt parley #stmt",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "sweet \\( #expr \\) \\u26f3 #caselist \\u26f3;",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "caselist": {
+      "patterns": [
+        {
+          "match": "#caselist trade #term : #stmts",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#caselist pirate : #stmts",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "",
+          "name": ""
+        }
+      ]
+    },
+    "repetition": {
+      "patterns": [
+        {
+          "match": "squall \\( #expr \\) #stmt",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "voyage \\( #optexpr ; #optexpr ; #optexpr \\) #stmt",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "weight_anchor #stmt squall \\( #expr \\) ;",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "var": {
+      "patterns": [
+        {
+          "match": "#type #id vector ;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#type * #pointer ;",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "pointer": {
+      "patterns": [
+        {
+          "match": "#id vector",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "* #pointer",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "func": {
+      "patterns": [
+        {
+          "match": "#type #funcid \\( #params \\) #stmt",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "commands": {
+      "patterns": [
+        {
+          "match": "strike;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "brace;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "heave \\( #expr \\) ;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "haul \\( #expr \\) ;",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "sail \\( #expr \\) ;",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "expr": {
+      "patterns": [
+        {
+          "match": "#expr + #expr",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#expr - #expr",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#term",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "term": {
+      "patterns": [
+        {
+          "match": "#id",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#number",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "id": {
+      "patterns": [
+        {
+          "match": "[a-zA-Z_][a-zA-Z0-9_]*",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "number": {
+      "patterns": [
+        {
+          "match": "\\d+",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "type": {
+      "patterns": [
+        {
+          "match": "aft",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "fore",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "port",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "starboard",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "funcid": {
+      "patterns": [
+        {
+          "match": "[a-zA-Z_][a-zA-Z0-9_]*",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "params": {
+      "patterns": [
+        {
+          "match": "#params , #param",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "#param",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "",
+          "name": ""
+        }
+      ]
+    },
+    "param": {
+      "patterns": [
+        {
+          "match": "#type #id",
+          "name": "keyword.control.endurance"
+        }
+      ]
+    },
+    "optexpr": {
+      "patterns": [
+        {
+          "match": "#expr",
+          "name": "keyword.control.endurance"
+        },
+        {
+          "match": "",
+          "name": ""
+        }
+      ]
     }
   }
-  
+}
