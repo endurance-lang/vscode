@@ -18,7 +18,7 @@
   "for": {
     "prefix": "for",
     "body": [
-      "voyage (jib $1 = 0; $1 < $2; $1++) ⚓️",
+      "voyage ($1 = 0; $1 < $2; $1 = $1 + 1) ⚓️",
       "\t$3",
       "⚓️;"
     ],
@@ -29,10 +29,10 @@
     "description": "Snippet for if else statement",
     "body": [
       "spyglass (${condition}) ⚓️",
-      "\t${1:// code to be executed if the condition is true}",
+      "\t${1: /ahoy code to be executed if the condition is true belay/ }",
       "⚓️;", 
       "parley ⚓️",
-      "\t${2:// code to be executed if the condition is false}",
+      "\t${2: /ahoy code to be executed if the condition is false belay/ }",
       "⚓️;"
     ]
   },
@@ -57,17 +57,15 @@
     "description": "Snippet for while loop",
     "body": [
       "squall (${condition}) ⚓️",
-      "\t${1:/ahoy belay/}",
+      "\t${1: /ahoy belay/ }",
       "⚓️;"
     ]
   },
   "main": {
     "prefix": "main",
     "body": [
-      "inport",
-      "",
       "jib oggin() ⚓️",
-      "\t${1:/ahoy belay/ }",
+      "\t${1: /ahoy belay/ }",
       "\tland_ho 0;",
       "⚓️;"
     ],
